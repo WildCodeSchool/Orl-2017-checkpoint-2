@@ -10,13 +10,5 @@ namespace NLF\CommitStripBundle\Repository;
  */
 class CardRepository extends \Doctrine\ORM\EntityRepository
 {
-    public function nombreArticles()
-    {
-        $qb = $this->createQueryBuilder('a');
 
-        $qb->select('COUNT(o.id)')
-            ->groupBy('o.name');
-
-        return $qb->getQuery()->getSingleScalarResult();
-    }
 }

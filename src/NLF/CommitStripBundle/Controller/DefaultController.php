@@ -12,7 +12,7 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $card = $em->getRepository('NLFCommitStripBundle:Card')->find($nbcard);
+        $card = $em->getRepository('NLFCommitStripBundle:Card')->findOneBynbcard($nbcard);
 
 
         return $this->render('NLFCommitStripBundle:Card:index.html.twig', array('cards' => $card));
