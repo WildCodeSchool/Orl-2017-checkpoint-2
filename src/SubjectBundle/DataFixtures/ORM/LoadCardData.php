@@ -1,5 +1,4 @@
 <?php
-/*
 namespace SubjectBundle\DataFixtures\ORM;
 
 use CommitStripBundle\Entity\Card;
@@ -38,4 +37,3 @@ class LoadCardData implements FixtureInterface
         $manager->flush();
     }
 }
-*/
