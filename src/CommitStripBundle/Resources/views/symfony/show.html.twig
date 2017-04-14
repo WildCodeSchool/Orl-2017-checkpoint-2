@@ -11,7 +11,9 @@
 <h1>Card </h1>
     <img src= "{{ asset (card.picture) }}" />
 
-<a href="">Suivant</a>
+<a href="{{ (card.nbcard -1) }}">Précédent</a>
+
+<a href="{{ card.nbcard +1 }}">Suivant</a>
 
 
 
