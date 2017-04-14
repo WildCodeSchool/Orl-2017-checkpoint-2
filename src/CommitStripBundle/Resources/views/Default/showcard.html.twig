@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Story</title>
+</head>
+<body>
+
+<h1>Story</h1>
+
+<img src={{ card.picture }} alt="card{{ card.nbcard }}" title="Card N°{{ card.nbcard }}" /><br />
+<form method="post" action="showcard.html.twig"></form>
+<input type="hidden" name="id" value="'.$id.'"/><br />
+<input class="btn btn-success" type="submit" name="suivant" value="Suivant" /><br />
+</form>
+
+</body>
+</html>
