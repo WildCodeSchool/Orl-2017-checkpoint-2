@@ -19,7 +19,7 @@ class CardController extends Controller
     public function showCard($id)
     {
         $em = $this->getDoctrine()->getManager();
-        $card = $em->getRepository('CommitStripBundle:Card')->find($id);
+        $card = $em->getRepository('CommitStripBundle:Card')->findOneBy($id);
 
         return $this->render('CommitStripBundle:Card:show.html.twig', ['card' => $card]);
     }
