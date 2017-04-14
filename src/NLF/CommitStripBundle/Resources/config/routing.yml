@@ -1,0 +1,15 @@
+nlf_commit_strip_homepage:
+    path:     /
+    defaults: { _controller: NLFCommitStripBundle:Default:card }
+
+nlf_commit_strip_add:
+    path:     /add
+    defaults: { _controller: NLFCommitStripBundle:Default:add }
+
+nlf_commit_strip_card:
+    path:     /{nbcard}
+    defaults: { _controller: NLFCommitStripBundle:Default:card }
+    requirements:
+            page: \d*
+
+

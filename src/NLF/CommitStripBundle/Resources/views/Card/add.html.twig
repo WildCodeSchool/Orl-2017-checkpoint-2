@@ -1,0 +1,19 @@
+{% extends "NLFCommitStripBundle::layout.html.twig" %}
+{% block body %}
+
+    {{ message }}
+    <form action="" method="POST">
+        Voici les storys disponible :
+    <select id="">
+    {% for story in storys %}
+        <option value="{{ story.name }}">{{ story.name }}</option>
+        {% endfor %}
+        </select>
+        <br/>
+Rentrer le nom d'une story existante ou saisissez en une nouvelle :
+        <input type="text" name="name"><br/>
+        <input type="text" name="nb"><br/>
+        <input type="text" name="picture"><br/>
+        <button type="submit" name="add">envoyer</button>
+        </form>
+        {% endblock %}

@@ -1,0 +1,4 @@
+services:
+#    nlf_commit_strip.example:
+#        class: NLF\CommitStripBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

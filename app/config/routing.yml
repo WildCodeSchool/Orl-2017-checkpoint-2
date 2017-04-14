@@ -3,3 +3,9 @@ subject:
     type:     annotation
     prefix:   /
 
+nlf_commit_strip:
+    resource: "@NLFCommitStripBundle/Resources/config/routing.yml"
+    prefix:   /story/
+
+
+

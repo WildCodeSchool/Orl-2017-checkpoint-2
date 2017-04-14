@@ -1,0 +1,12 @@
+{%  extends "NLFCommitStripBundle::layout.html.twig" %}
+{% block body %}
+<div class="container text-center">
+    <img style="display: inline;" src="{{ cards.picture }}">
+    <div class="text-center col-xs-12">
+
+        <a class="btn btn-primary" href="{% if cards.nbcard <= 1 %}1{% else %}{{ cards.nbcard - 1 }}{% endif %}">Avant</a>
+        <a class="btn btn-primary" href="{% if cards.nbcard >= 4 %}4{% else %}{{ cards.nbcard + 1 }}{% endif %}">Aprés</a>
+
+    </div>
+</div>
+{% endblock %}
