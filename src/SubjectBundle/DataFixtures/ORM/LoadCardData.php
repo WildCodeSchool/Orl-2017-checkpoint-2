@@ -31,7 +31,7 @@ class LoadCardData implements FixtureInterface
         foreach ($stories as $story){
             $card = new Card();
             $card->setPicture($story['picture']);
-            $card->setNbpage($story['nbcard']);
+            $card->setNbcard($story['nbcard']);
             $manager->persist($card);
         }
         $manager->flush();

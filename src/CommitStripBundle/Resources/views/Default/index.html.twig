@@ -1,0 +1,9 @@
+<img src="{{ card.picture }}" />
+<div>
+{% if (minid < card.nbcard)  %}
+<a href="{{ path('prev_story', {'id' : card.id}) }}">Prev</a>
+{% endif %}
+{% if (maxid > card.nbcard)  %}
+<a href="{{ path('next_story', {'id' : card.id}) }}">Next</a>
+{% endif %}
+</div>
