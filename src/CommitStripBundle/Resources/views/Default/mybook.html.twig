@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="commitstrip.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="col-lg-12 text-center">
+        <div class="row">
+            <h1>CommitStrip</h1>
+            <h2>Checkpoint-2</h2>
+            <p>Bienvenue sur <strong>CommitStrip</strong></p>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="row">
+            {% if left = true %}
+                <div class="col-lg-4 text-center"><div class="btn btn-success">arrow left</div></div>
+            {% endif %}
+            <div class="col-lg-4 text-center"><img src="{{ picture }}" alt="photo"></div>
+            {% if right = true %}
+                <div class="col-lg-4 text-center"><div class="btn btn-success">arrow right</div></div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<title>Document</title>
+</body>
+</html>
