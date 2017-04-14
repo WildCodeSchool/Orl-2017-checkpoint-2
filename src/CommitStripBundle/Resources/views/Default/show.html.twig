@@ -1,0 +1,13 @@
+<h1>livres du checkpoint2</h1>
+
+{% for card in cards %}
+<p>{{ card.nbcard }}</p>
+    </br>
+<img src="{{ card.picture }}"/>
+    </br>
+
+{% set foo = card.id+1 %}
+
+<a href="./story/{{ foo }}"> suivant</a>
+
+{% endfor %}

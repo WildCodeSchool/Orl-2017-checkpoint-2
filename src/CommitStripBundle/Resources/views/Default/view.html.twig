@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Checkpoint{% endblock %}</title>
+
+    {% block stylesheets %}
+        <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    {% endblock %}
+</head>
+<body>
+{% block body %}
+    <h1>livres du checkpoint2</h1>
+
+    <p>{{ card.nbcard }}</p>
+    </br>
+    <img src="{{ card.picture }}"/>
+    </br>
+
+    {% set fooPlus = card.id+1 %}
+    {% set fooMoins = card.id-1 %}
+
+
+    {% if fooMoins<1 %}
+        <a class="btn btn-default" href="./story/{{ fooPlus }}" role="button">suivant</a>
+    {% elseif fooPlus>4 %}
+        <a class="btn btn-default" href="./story/{{ fooMoins }}" role="button">précédent</a>
+    {% else %}
+        <a class="btn btn-default" href="./story/{{ fooPlus }}" role="button">suivant</a>
+        <a class="btn btn-default" href="./story/{{ fooMoins }}" role="button">précédent</a>
+    {% endif %}
+
+{% endblock %}
+</body>
+</html>
+
+
+

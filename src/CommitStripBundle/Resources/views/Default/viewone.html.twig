@@ -1,0 +1,14 @@
+<h1>livres du checkpoint2</h1>
+
+<p>{{ card.nbcard }}</p>
+</br>
+<img src="{{ card.picture }}"/>
+</br>
+
+{% set fooPlus = card.id+1 %}
+    {% set fooMoins = card.id-1 %}
+
+
+
+<a href="./{{ fooMoins }}"> précédent</a>
+<a href="./{{ fooPlus }}"> suivant</a>
