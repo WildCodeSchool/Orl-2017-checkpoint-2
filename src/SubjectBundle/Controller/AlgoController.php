@@ -16,16 +16,18 @@ class AlgoController extends Controller
      */
     public function strlenOrder($string, $order)
     {
-        $mots=explode(" ",$string);
-        for ($i=0; $i<count($mots); $i++){
-            $mots[$i]['nblettres']=strlen($mots[$i]);
-            $letternb=strlen($mots[$i]);
-            if ($order=='ASC' && asort($letternb)===TRUE){
-                echo implode(" ", $mots);
+        $words=explode(" ",$string);
+        $words['lettersnb']='';
+        for ($i=0; $i<count($words); $i++){
+            $words[$i]['lettersnb']=strlen($words[$i]);
+            $lettersnb=strlen($words[$i]);
+            if ($order=='ASC' && asort($lettersnb)===TRUE){
+                echo implode(" ", $words);
             }
-            elseif ($order=='DES' && arsort($letternb)===TRUE) {
-                echo implode(" ", $mots);
+            elseif ($order=='DES' && arsort($lettersnb)===TRUE) {
+                echo implode(" ", $words);
             }
         }
+        return $words;
     }
 }

@@ -4,14 +4,23 @@ namespace CommitStrip\CommitStripBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Doctrine;
 
-class DefaultController extends Controller
+
+class DefaultController
 {
     /**
-     * @Route("/")
+     * @Route("/book" name="book")
      */
-    public function indexAction()
+    public function getCard()
     {
-        return $this->render('CommitStripCommitStripBundle:Default:index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $card = $em->getRepository('CommitStripCommitStripBundle:Card')->findAll();
+        $picture = $this->getPicture();
+        $nbcard = $this->getNbcard();
+        return $twig->load('index.html.twig')->render(['picture' => $picture, 'nbcard' => $nbcard]);
+
+
     }
+
 }
