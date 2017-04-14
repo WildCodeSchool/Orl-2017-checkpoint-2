@@ -39,6 +39,6 @@ class AlgoControllerTest extends \PHPUnit\Framework\TestCase
     }
 
     public function test6() {
-        $this->assertEquals ("ordinateur portable combien coûte un", $this->controller->strlenOrder("combien coûte un ordinateur portable", "DESC"));
+        $this->assertEquals ("ordinateur portable combien coûte un", $this->controller->strlenOrder("combien coûte un ordinateur portable", "ASC"));
     }
 }
