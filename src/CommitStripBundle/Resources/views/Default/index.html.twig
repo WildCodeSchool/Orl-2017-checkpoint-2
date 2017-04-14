@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Commit Strip</title>
+
+    <link href="../../web/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../web/css/stylesheet.css" rel="stylesheet"></head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">WCS Commit Strip</a>
+        </div>
+
+    </div><!-- /.container-fluid -->
+</nav>
+
+
+<h1 class="text-center">My Commit Strip</h1>
+
+{% block content %}
+
+<div class="row">
+    <div class="col-xs-offset-1 col-xs-10 text-center">
+
+        <img src="{{ carte.picture }}" alt="carte {{ carte.id }} du commit strip" />
+
+    </div>
+</div>
+
+{% endblock %}
+
+<div class="row">
+
+    <div class="col-xs-offset-1 col-xs-2">
+        <button type="button" class="btn btn-default" href="{{ path('previous') }}" aria-label="Left Align">
+            <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+        </button>
+    </div>
+    <div class="col-xs-offset-6 col-xs-2">
+        <button type="button" class="btn btn-default" href="{{ path('next') }}" aria-label="Right Align">
+            <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+        </button>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="../../web/js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="../../web/js/bootstrap.js"></script>
+</body>
+</html>
+

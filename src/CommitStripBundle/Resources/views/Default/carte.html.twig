@@ -1,0 +1,15 @@
+{% extends '@CommitStrip/index.html.twig' %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-xs-offset-1 col-xs-10 text-center">
+
+            {% for attribute(carte, showNextCard()) %}
+            <img src="{{ carte.picture }}" alt="carte {{ carte.id }} du commit strip" />
+            {% endfor %}
+
+        </div>
+    </div>
+
+{% endblock %}
