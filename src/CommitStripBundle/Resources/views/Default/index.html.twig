@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Checkpoint 2 - PHP | CommitStrip</title>
+
+        <!-- Compiled and minified CSS -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+        <!-- Bootstrap -->
+        <link href="{{ asset('bundles/commitStrip/css/bootstrap.min.css')}} rel="stylesheet">
+        <link href="{{ asset('bundles/commitStrip/ionicons/css/ionicons.min.css')}} rel="stylesheet">
+
+                                                                                                   <!-- main css -->
+        <link rel="stylesheet" href="{{ asset('bundles/commitStrip/css/style.css') }}">
+
+        <!-- modernizr -->
+        <script src="{{ asset('bundles/commitStrip/js/modernizr.js')}}"></script>
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <!-- box header -->
+    <header class="box-header">
+        <div class="box-logo">
+            <a href="index.html"></a>
+        </div>
+        <!-- box-nav -->
+        <a class="box-primary-nav-trigger" href="#0">
+            <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
+        </a>
+        <!-- box-primary-nav-trigger -->
+    </header>
+    <!-- end box header -->
+
+    <!-- nav -->
+    <nav>
+        <ul class="box-primary-nav">
+            <li class="box-label">Commit Strip</li>
+
+            <li><a href="#">Accueil</a> <i class="ion-ios-circle-filled color"></i></li>
+            <li><a href="#">Les livres</a></li>
+            <li><a href="#">À propos</a></li>
+
+
+            <li class="box-label">Follow Us!</li>
+
+            <li class="box-social"><a href="#0"><i class="ion-social-facebook"></i></a></li>
+            <li class="box-social"><a href="#0"><i class="ion-social-instagram-outline"></i></a></li>
+            <li class="box-social"><a href="#0"><i class="ion-social-twitter"></i></a></li>
+            <li class="box-social"><a href="#0"><i class="ion-social-dribbble"></i></a></li>
+        </ul>
+    </nav>
+    <!-- end nav -->
+
+    <!-- box-intro -->
+    <section class="box-intro">
+        <div class="table-cell">
+            <h1 class="box-headline letters rotate-2">
+                    <span class="box-words-wrapper">
+                        <b class="is-visible">CommitStrip</b>
+                        <b>&nbsp;WildCodeSchool.</b>
+                    </span>
+            </h1>
+            <h5>Le mini site dédié aux livres</h5>
+        </div>
+
+        <div class="mouse">
+            <div class="scroll"></div>
+        </div>
+    </section>
+    <!-- end box-intro -->
+</div>
+
+<img src="{{ card.picture }}" alt="">
+
+    <footer>
+        <div class="container-fluid">
+            <div class="container">
+                <p class="copyright"> © 2017 Copyright WCS | CommitStrip</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- back to top -->
+    <a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
+    <!-- end back to top -->
+
+    <!-- jQuery -->
+    <script src="{{ asset('bundles/commitStrip/js/jquery-2.1.1.js')}}"></script>
+    <!--  plugins -->
+    <script src="{{ asset('bundles/commitStrip/js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('bundles/commitStrip/js/menu.js')}}"></script>
+    <script src="{{ asset('bundles/commitStrip/js/animated-headline.js')}}"></script>
+    <script src="{{ asset('bundles/commitStrip/js/isotope.pkgd.min.js')}}"></script>
+
+    <!--  custom script -->
+    <script src="{{ asset('bundles/commitStrip/js/custom.js')}}"></script>
+
+
+
+</body>
+</html>
