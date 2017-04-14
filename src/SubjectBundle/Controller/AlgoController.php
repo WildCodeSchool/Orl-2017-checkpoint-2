@@ -12,6 +12,10 @@ class AlgoController extends Controller
     //
     public function strlenOrder($string, $order)
     {
-
+        $mots = explode(' ',$string);
+        foreach ($mots as $mot) {
+           strlen($mot);
+        }
+        var_dump($order);
     }
 }
