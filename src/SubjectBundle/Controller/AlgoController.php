@@ -15,7 +15,7 @@ class AlgoController extends Controller
         //je met chaque mot de ma phrase dans un tableau
         $mots = explode(" ", $string);
 
-        //je compte la longueur de mots
+        //je compte la longueur de mots et je crée un nouveau tableau
         foreach ($mots as $mot) {
             $longueur[$mot] = strlen($mot);
         }
