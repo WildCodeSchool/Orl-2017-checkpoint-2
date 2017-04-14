@@ -1,0 +1,15 @@
+commit_strip_homepage:
+    path:     /story/{id}
+    defaults:
+        _controller: CommitStripBundle:Default:index
+        id:      1
+    requirements:
+        id:   \d
+commit_strip_add:
+    path:      /add/{href}
+    defaults:
+        _controller: CommitStripBundle:Default:add
+        href:      https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hausziege_04.jpg/220px-Hausziege_04.jpg
+oc_platform_home:
+    path:      /form
+    defaults:  { _controller: CommitStripBundle:Default:form }

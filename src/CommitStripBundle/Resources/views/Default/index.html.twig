@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Histoire</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body id="body">
+<nav class="light-blue darken-4">
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo center">Le livre en ligne</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li><a href="/form">Ajouter une bulle</a></li>
+        </ul>
+    </div>
+</nav>
+<h1 class="center-align">La petite histoire du développeur</h1>
+<div class="container">
+    <div class="row">
+        {% if card.id>1 %}
+            <div class="center-align col s3">
+                <a href="/story/{{ card.id-1 }}" class="light-blue darken-4 btn-large"><i class="large material-icons">skip_previous</i></a>
+            </div>
+        {% else %}
+            <div class="center-align col s3">
+            </div>
+        {% endif %}
+        <div class="center-align col s6">
+            <img class="center-align" src="{{ card.picture }}">
+            <p>Bulle n°{{ card.nbcard }} sur {{ nbCards }}</p>
+        </div>
+        {% if card.id<nbCards %}
+            <div class="center-align col s3">
+                <a href="/story/{{ card.id+1 }}" class="light-blue darken-4 btn-large"> <i class="large material-icons">skip_next</i></a>
+            </div>
+        {% endif %}
+    </div>
+</div>
+</body>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+</html>
