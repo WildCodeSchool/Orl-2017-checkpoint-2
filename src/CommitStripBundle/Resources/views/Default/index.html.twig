@@ -1,0 +1,37 @@
+<!DOCTYPEhtml>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/stylesheet.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <h1>Story {{ card.nbcard }} / {{ nbcards }}</h1>
+            </div>
+            <div class="col-xs-12 center-block">
+                <img class="img-responsive" src="{{ card.picture }}" alt="">
+            </div>
+        </div>
+        {#<div class="row">#}
+            {#<div class="col-xs-6 text-center">#}
+                {#if {{ before !=0 }}#}
+                {#<a href="app_dev/story/{{ before }}" style="btn btn-standard">Précédent</a>#}
+                {#{% endif %}#}
+            {#</div>#}
+            {#<div class="col-xs-6 text-center">#}
+                {#if {{ after < nbcards }}#}
+                {#<a href="app_dev/story/{{ before }}" style="btn btn-standard">Suivant</a>#}
+                {#{% endif %}#}
+            {#</div>#}
+        {#</div>#}
+    </div>
+
+</body>
+
+</html>
