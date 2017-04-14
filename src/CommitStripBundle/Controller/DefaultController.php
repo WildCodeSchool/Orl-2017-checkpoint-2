@@ -6,12 +6,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
 {
-    public function addAction($href)
+    public function addAction()
     {
         $em = $this->getDoctrine()->getManager();
         $card = new \CommitStripBundle\Entity\Card();
-        $card->setPicture($href);
-        $nbCard = count($this->countCards());
+        $card->setPicture("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR2bjBmqPsE6FbME2cOHFByo7hA7Xrwnim0vMWUhYAcpPVE3-P");
+        $nbCard = count($this->countCards())+1;
         $card->setNbcard($nbCard);
         $em->persist($card);
         $em->flush();
