@@ -93,4 +93,5 @@ class Card
     {
         return $this->nbcard;
     }
+
 }
