@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        {% block body %}
+
+       <img src="{{ card.picture }}">
+
+            <form method="post" action="{{ card.nbcard -1 }}">
+                <button >page precedente </button>
+            </form>
+
+
+            <form method="post" action="{{ card.nbcard +1 }}">
+            <button >page suivante </button>
+            </form>
+        {% endblock %}
+
+
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
